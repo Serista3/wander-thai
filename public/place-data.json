@@ -246,7 +246,11 @@
     "travel_method": "นั่งเรือสปีดโบ๊ทจากท่าเรือปากบารา",
     "latitude": 6.4883,
     "longitude": 99.3039,
-    "gallery": ["url1.jpg", "url2.jpg"]
+    "gallery": [
+      "/images/หลี๋เป๊ะ-1.jpg",
+      "/images/หลี๋เป๊ะ-2.jpg",
+      "/images/หลี๋เป๊ะ-3.jpg"
+    ]
   },
   {
     "id": "P012",

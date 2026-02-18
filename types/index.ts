@@ -6,6 +6,8 @@ export type NavItem = {
 export type Category = {
   id: number;
   title: string;
+  description: string;
+  image: string;
 };
 
 export type MessageNoti = {
@@ -32,3 +34,8 @@ export type Place = {
   longitude: number;
   gallery: string[];
 };
+
+export type Favorite = {
+  id: string;
+  placeId: string;
+}

@@ -8,15 +8,15 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { TextAlignStart } from 'lucide-react';
+import { TextAlignJustify, House, Globe, Contact, Library } from 'lucide-react';
 import Link from 'next/link';
 
 export default function UserMenu() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" className="border-gray-400">
-          <TextAlignStart />
+        <Button variant="outline" size='icon' className="border-gray-400">
+          <TextAlignJustify />
           <span className="hidden">Menu</span>
         </Button>
       </DropdownMenuTrigger>
@@ -25,7 +25,8 @@ export default function UserMenu() {
           <DropdownMenuLabel className="font-semibold">User</DropdownMenuLabel>
           <DropdownMenuItem asChild>
             <Link href="/user/my-collection" className="cursor-pointer">
-              My Collection
+              <Library />
+              <span>My Collection</span>
             </Link>
           </DropdownMenuItem>
         </DropdownMenuGroup>
@@ -36,17 +37,20 @@ export default function UserMenu() {
           </DropdownMenuLabel>
           <DropdownMenuItem asChild>
             <Link href="/" className="cursor-pointer">
-              Home
+              <House />
+              <span>Home</span>
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
             <Link href="/browse" className="cursor-pointer">
-              Browse
+              <Globe />
+              <span>Browse</span>
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
             <Link href="/contact" className="cursor-pointer">
-              Contact
+              <Contact />
+              <span>Contact</span>
             </Link>
           </DropdownMenuItem>
         </DropdownMenuGroup>
