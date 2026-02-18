@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Logo(){
   return (
-    <Link href='/' className="text-3xl capitalize font-semibold">
+    <Link href='/' className="text-2xl capitalize font-semibold">
       wander thai
     </Link>
   )
