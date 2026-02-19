@@ -23,6 +23,9 @@ export type Place = {
   province: string;
   rating: number;
   status: string;
+  average_temperature: string;
+  recommended_time: string;
+  parking: string;
   description_short: string;
   description_full: string;
   budget: string;

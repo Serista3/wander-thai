@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { Place } from '@/types';
-import { useRef } from 'react';
+import { Place } from "@/types";
+import { useRef } from "react";
 
 import {
   Carousel,
@@ -9,13 +9,13 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@/components/ui/carousel';
-import Autoplay from 'embla-carousel-autoplay';
-import Image from 'next/image';
-import Heading from '../ui/Heading';
-import Paragraph from '../ui/Paragraph';
-import { Separator } from '../ui/separator';
-import { MapPin } from 'lucide-react';
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import Image from "next/image";
+import Heading from "../ui/Heading";
+import Paragraph from "../ui/Paragraph";
+import { Separator } from "../ui/separator";
+import { MapPin } from "lucide-react";
 
 export default function SlidePlacesHome({ places }: { places: Place[] }) {
   const plugin = useRef(Autoplay({ delay: 5000, stopOnInteraction: true }));
@@ -31,7 +31,7 @@ export default function SlidePlacesHome({ places }: { places: Place[] }) {
         {places.map((place) => (
           <CarouselItem key={place.id}>
             <div className="relative">
-              <div className='h-70 overflow-hidden'>
+              <div className="h-70 overflow-hidden">
                 <Image
                   src={place.gallery.at(0)!}
                   alt={place.name}
@@ -47,15 +47,15 @@ export default function SlidePlacesHome({ places }: { places: Place[] }) {
                   <Paragraph>{place.province}</Paragraph>
                 </div>
                 <Separator />
-                <Paragraph className='mt-3'>{place.description_full}</Paragraph>
+                <Paragraph className="mt-3">{place.description_full}</Paragraph>
               </div>
             </div>
           </CarouselItem>
         ))}
       </CarouselContent>
       <div className="flex absolute top-4 right-4 gap-1.5">
-        <CarouselPrevious className="static translate-y-0" />
-        <CarouselNext className="static translate-y-0" />
+        <CarouselPrevious className="static translate-y-0 border-gray-400" />
+        <CarouselNext className="static translate-y-0 border-gray-400" />
       </div>
     </Carousel>
   );

@@ -17,40 +17,40 @@ export default function UserMenu() {
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size='icon' className="border-gray-400">
           <TextAlignJustify />
-          <span className="hidden">Menu</span>
+          <span className="hidden">เมนู</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuGroup>
-          <DropdownMenuLabel className="font-semibold">User</DropdownMenuLabel>
+          <DropdownMenuLabel className="font-semibold">ผู้ใช้</DropdownMenuLabel>
           <DropdownMenuItem asChild>
             <Link href="/user/my-collection" className="cursor-pointer">
               <Library />
-              <span>My Collection</span>
+              <span>รายการที่ชื่นชอบ</span>
             </Link>
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuLabel className="font-semibold">
-            Navigaiton
+            ส่วนการนำทาง
           </DropdownMenuLabel>
           <DropdownMenuItem asChild>
             <Link href="/" className="cursor-pointer">
               <House />
-              <span>Home</span>
+              <span>หน้าแรก</span>
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
             <Link href="/browse" className="cursor-pointer">
               <Globe />
-              <span>Browse</span>
+              <span>สำรวจและค้นหา</span>
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
             <Link href="/contact" className="cursor-pointer">
               <Contact />
-              <span>Contact</span>
+              <span>ติดต่อเรา</span>
             </Link>
           </DropdownMenuItem>
         </DropdownMenuGroup>

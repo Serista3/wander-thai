@@ -11,7 +11,7 @@ import Link from 'next/link';
 export default function CategoryCard({ category }: { category: Category }) {
   return (
     <Card className="relative w-full p-0 border-none group">
-      <Link href="/" className="absolute w-full h-full z-3" />
+      <Link href={`/browse?category=${category.title}`} className="absolute w-full h-full z-3" />
       <div className="overflow-hidden rounded-lg relative">
         <div className="shadow-[inset_0_-78px_35px_0_rgba(0,0,0,0.70)] group-hover:shadow-[inset_0_-70px_40px_0_rgba(0,0,0,0.5)] transition-all duration-300 absolute top-0 left-0 w-full h-full"></div>
         <Image
