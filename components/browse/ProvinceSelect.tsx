@@ -8,10 +8,17 @@ import {
 } from '../ui/combobox';
 import { provinces } from '@/lib/placeholder-data';
 
-export default function ProvinceSelect() {
+type ProvinceSelectProps = {
+  value: string | null;
+  onChange: (value: string | null) => void;
+}
+
+export default function ProvinceSelect({ value, onChange }: ProvinceSelectProps) {
   return (
-    <Combobox items={provinces}>
-      <ComboboxInput placeholder="เลือกจังหวัด" />
+    <Combobox items={provinces} value={value} onValueChange={onChange} name='province'>
+      <ComboboxInput placeholder="เลือกจังหวัด" style={{
+        fontSize: '14px'
+      }} />
       <ComboboxContent>
         <ComboboxEmpty>ไม่พบเจอจังหวัด</ComboboxEmpty>
         <ComboboxList>

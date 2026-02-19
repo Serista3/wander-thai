@@ -12,10 +12,15 @@ import {
 } from '../ui/combobox';
 import { tags } from '@/lib/placeholder-data';
 
-export default function AtmosphereMultiSelect() {
+type AtmosphereMultiSelectProps = {
+  value: string[] | null;
+  onValueChange: (value: string[] | null) => void;
+}
+
+export default function AtmosphereMultiSelect({ ...props }: AtmosphereMultiSelectProps) {
   const anchor = useComboboxAnchor();
   return (
-    <Combobox multiple autoHighlight items={tags} defaultValue={[tags[0]]}>
+    <Combobox multiple autoHighlight items={tags} defaultValue={[tags[0]]} {...props} name='tags'>
       <ComboboxChips ref={anchor} className="w-full max-w-xs">
         <ComboboxValue>
           {(values) => (

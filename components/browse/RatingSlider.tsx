@@ -1,12 +1,12 @@
 import { Label } from "../ui/label";
 import { Slider } from "../ui/slider";
 
-type RatingGroupProps = {
+type RatingSliderProps = {
   value: number[];
   setValue: (value: number[]) => void
 }
 
-export default function RatingGroup({ value, setValue }: RatingGroupProps) {
+export default function RatingSlider({ value, setValue }: RatingSliderProps) {
   return (
     <div className="mx-auto grid w-full max-w-xs gap-3">
       <div className="flex items-center justify-between gap-2">
@@ -19,6 +19,7 @@ export default function RatingGroup({ value, setValue }: RatingGroupProps) {
         id="slider-demo-temperature"
         value={value}
         onValueChange={setValue}
+        name="rating"
         min={0}
         max={5}
         step={0.5}

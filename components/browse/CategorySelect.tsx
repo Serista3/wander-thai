@@ -8,10 +8,15 @@ import {
 } from '../ui/select';
 import { categories } from '@/lib/placeholder-data';
 
-export default function CategorySelect() {
+type CategorySelectProps = {
+  value: string;
+  onValueChange: (value: string) => void;
+}
+
+export default function CategorySelect({ ...props }: CategorySelectProps) {
   return (
     <div>
-      <Select>
+      <Select {...props} name='category'>
         <SelectTrigger>
           <SelectValue placeholder="เลือกหมวดหมู่" />
         </SelectTrigger>
