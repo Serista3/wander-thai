@@ -87,7 +87,7 @@ export default function FilterControl() {
   return (
     <form
       onSubmit={handleForm}
-      className="p-6 border border-gray-300 rounded-lg"
+      className="p-6 border border-gray-300 rounded-lg lg:self-start"
     >
       <FieldSet>
         <FieldLegend

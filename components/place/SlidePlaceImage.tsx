@@ -25,7 +25,7 @@ export function SlidePlaceImage({
                 alt={`${title}-${index}`}
                 width={1000}
                 height={600}
-                className="object-cover w-full h-50"
+                className="object-cover w-full h-50 sm:h-75 md:h-95 lg:h-115"
               />
             </div>
           </CarouselItem>

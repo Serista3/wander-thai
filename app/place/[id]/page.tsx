@@ -58,8 +58,8 @@ export default async function PlaceDetailPage({
 
       {/* Detail */}
 
-      <div>
-        <div className="flex flex-col gap-15">
+      <div className="grid grid-cols-1 lg:grid-cols-4 lg:gap-4">
+        <div className="flex flex-col gap-15 lg:col-span-3">
           <div className="flex flex-col gap-1 items-start text-black mt-3">
             <div className="flex gap-3 justify-between items-center w-full">
               <div className="text-sm flex gap-2 items-center">
@@ -110,7 +110,7 @@ export default async function PlaceDetailPage({
               </ul>
             </div>
           </section>
-          <div className="rounded-lg bg-emerald-500 text-white p-4 shadow-xl">
+          <div className="rounded-lg bg-emerald-500 text-white p-4 shadow-xl max-w-150">
             <div className="flex items-center gap-2 mb-3">
               <SquareCheckBig />
               <Heading level="3">Tip แนะนำ</Heading>
@@ -126,7 +126,7 @@ export default async function PlaceDetailPage({
           </section>
         </div>
         <iframe
-          className="max-w-150 h-125 mt-10 rounded-lg"
+          className="w-full h-70 mt-10 lg:mt-5 rounded-lg"
           style={{
             border: 0,
           }}

@@ -7,10 +7,11 @@ import {
 } from '@/components/ui/carousel';
 import { Place } from '@/types';
 import PlaceCard from '../place/PlaceCard';
+import { cn } from '@/lib/utils';
 
-export default function PlaceList({ places }: { places: Place[] }) {
+export default function PlaceList({ places, className }: { places: Place[], className?: string }) {
   return (
-    <Carousel className="w-full max-w-275 relative">
+    <Carousel className={cn("w-full max-w-275 relative", className)}>
       <CarouselContent className="-ml-1">
         {places.map((place) => (
           <CarouselItem

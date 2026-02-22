@@ -41,23 +41,32 @@ export default async function Home() {
       <SectionContent title="ธรรมชาติ">
         <PlaceList places={neturalPlaces} />
       </SectionContent>
-      <SectionContent title="ติดต่อเรา" className="bg-black text-white">
-        <div className="flex flex-col gap-8 mb-4">
-          <div>
+      <Separator />
+      <SectionContent title="ติดต่อเรา">
+        <div className="flex flex-col sm:flex-row gap-8 mb-4">
+          <div className='flex flex-col justify-between'>
             <Paragraph>
-              เราให้บริการแก่ผู้เข้าชมเว็บไซต์อย่างเต็มที่ หากท่านประสบปัญหาในด้านใด หรือมีเรื่องที่ต้องการสอบถาม 
+              เราให้บริการแก่ผู้เข้าชมเว็บไซต์อย่างเต็มที่
+              หากท่านประสบปัญหาในด้านใด หรือมีเรื่องที่ต้องการสอบถาม
               สามารถติดต่อกับทางบริษัทเราได้ที่ด่านล่างนี้
             </Paragraph>
-            <Button variant="outline" className="text-black font-semibold mt-6">
+            <Button
+              variant="default"
+              className="font-semibold mt-6 w-fit"
+              asChild
+            >
               <Link href="contact">ติดต่อเรา</Link>
             </Button>
           </div>
-          <Image
-            src={contactImg}
-            alt="รูปภาพแสดงในหัวข้อติดต่อเรา"
-            width={700}
-            height={300}
-          />
+          <div className='w-full sm:h-40 sm:w-100 rounded-lg overflow-hidden'>
+            <Image
+              src={contactImg}
+              alt="รูปภาพแสดงในหัวข้อติดต่อเรา"
+              className="w-full h-full object-cover"
+              width={700}
+              height={300}
+            />
+          </div>
         </div>
       </SectionContent>
     </div>
