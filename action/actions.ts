@@ -11,7 +11,7 @@ const renderError = function (error: unknown): MessageNoti {
 
 export const getPlaces = async function () {
   try {
-    const res = await fetch('http://localhost:3000/place-data.json');
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/place-data.json`);
     const places = await res.json();
     return places;
   } catch (err) {
