@@ -19,8 +19,8 @@ export default function CategoryList({ categories }: { categories: Category[] })
         ))}
       </CarouselContent>
       <div className="absolute -top-11 right-0 flex items-center gap-2">
-        <CarouselPrevious className="static translate-0 border-gray-400" />
-        <CarouselNext className="static translate-0  border-gray-400" />
+        <CarouselPrevious className="static translate-0 border-gray-400" aria-label="หมวดหมู่ก่อนหน้านี้" />
+        <CarouselNext className="static translate-0  border-gray-400" aria-label="หมวดหมู่ถัดไป" />
       </div>
     </Carousel>
   )

@@ -63,7 +63,7 @@ export default async function Home() {
               src={contactImg}
               alt="รูปภาพแสดงในหัวข้อติดต่อเรา"
               className="w-full h-full object-cover"
-              width={700}
+              width={400}
               height={300}
             />
           </div>

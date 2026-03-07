@@ -11,7 +11,7 @@ export default function ContactPage() {
         <div className="flex flex-col gap-6">
           <div className="flex flex-col gap-2">
             <Heading level="3" className="flex items-center gap-2">
-              <MapPin />
+              <MapPin aria-hidden={true} />
               <span>ที่อยู่</span>
             </Heading>
             <Paragraph>
@@ -21,14 +21,14 @@ export default function ContactPage() {
           </div>
           <div className="flex flex-col gap-2">
             <Heading level="3" className="flex items-center gap-2">
-              <PhoneCall />
+              <PhoneCall aria-hidden={true} />
               <span>เบอร์โทรศัพท์</span>
             </Heading>
             <Paragraph>064-951-5415</Paragraph>
           </div>
           <div className="flex flex-col gap-2">
             <Heading level="3" className="flex items-center gap-2">
-              <Mail />
+              <Mail aria-hidden={true} />
               <span>อีเมล</span>
             </Heading>
             <Paragraph>stacla5282@gmail.com</Paragraph>

@@ -20,17 +20,19 @@ export default function PlaceCard({ place }: { place: Place }) {
       <Link
         className="absolute top-0 left-0 size-full z-3"
         href={`/place/${place.id}`}
+        aria-label={`ไปที่หน้ารายละเอียดของสถานที่ท่องเที่ยว${place.name}`}
       ></Link>
       <div className="relative overflow-hidden rounded-t-lg">
         <Image
           src={`${place.gallery.at(0)!}`}
-          alt={place.name}
-          width={1000}
-          height={400}
-          className="w-full h-50 object-cover group-hover:scale-104 transition-all duration-300"
+          alt={`Image of ${place.name}`}
+          width={350}
+          height={210}
+          className="w-full h-50 object-cover group-hover:scale-104 transition-all duration-300 brightness-75"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
         <Badge
-          className={`absolute top-4 right-4 z-4 ${place.status === 'เปิด' ? 'bg-emerald-500' : 'bg-red-500'} text-sm`}
+          className={`absolute top-4 right-4 z-4 font-semibold ${place.status === 'เปิด' ? 'bg-green-400 text-black' : 'bg-red-700'} text-sm`}
         >
           {place.status}
         </Badge>
@@ -51,11 +53,11 @@ export default function PlaceCard({ place }: { place: Place }) {
             {place.tags.join(', ')}
           </div>
           <div className="flex gap-1 items-center">
-            <MapPin />
+            <MapPin aria-hidden={true} />
             <span>{place.province}</span>
           </div>
           <Badge className="flex gap-1 items-center bg-yellow-300 text-black">
-            <Star fill="black" />
+            <Star fill="black" aria-hidden={true} />
             {place.rating}
           </Badge>
         </div>

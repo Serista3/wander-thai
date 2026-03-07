@@ -61,8 +61,9 @@ export default function SearchCommand() {
         variant="outline"
         size="icon"
         className="border-gray-400 rounded-full"
+        aria-label='ค้นหาสถานที่ท่องเที่ยว'
       >
-        <Search />
+        <Search aria-hidden={true} />
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen}>
         <Command shouldFilter={false}>

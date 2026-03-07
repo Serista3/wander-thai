@@ -51,7 +51,7 @@ export default async function PlaceDetailPage({
       </Breadcrumb>
       <Heading className="mb-2">{place.name}</Heading>
       <Paragraph className="flex gap-1 mb-4">
-        <MapPin />
+        <MapPin aria-hidden={true} />
         {place.province}
       </Paragraph>
       <SlidePlaceImage title={place.name} gallery={place.gallery} />
@@ -70,7 +70,7 @@ export default async function PlaceDetailPage({
               <FavoriteButton id={place.id} />
             </div>
             <Badge className="flex gap-1 items-center bg-yellow-300 text-black">
-              <Star fill="black" />
+              <Star fill="black" aria-hidden={true} />
               {place.rating}
             </Badge>
             <Paragraph className="mt-4">{place.description_full}</Paragraph>
@@ -112,7 +112,7 @@ export default async function PlaceDetailPage({
           </section>
           <div className="rounded-lg bg-emerald-500 text-white p-4 shadow-xl max-w-150">
             <div className="flex items-center gap-2 mb-3">
-              <SquareCheckBig />
+              <SquareCheckBig aria-hidden={true} />
               <Heading level="3">Tip แนะนำ</Heading>
             </div>
             <Separator />

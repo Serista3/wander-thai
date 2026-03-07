@@ -12,9 +12,10 @@ export default function FavoriteButton({ id }: { id: string }) {
       variant="outline"
       size="icon"
       className="rounded-full border-gray-300"
+      aria-label='กดชื่นชอบสถานที่ท่องเที่ยว'
       onClick={() => toggleFav(id)}
     >
-      <Heart fill={`${favorites.find(fav => fav.placeId === id) ? 'black' : 'transparent'}`} />
+      <Heart fill={`${favorites.find(fav => fav.placeId === id) ? 'black' : 'transparent'}`} aria-hidden={true} />
     </Button>
   );
 }

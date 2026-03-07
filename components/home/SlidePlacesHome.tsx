@@ -28,22 +28,24 @@ export default function SlidePlacesHome({ places }: { places: Place[] }) {
       onMouseLeave={plugin.current.reset}
     >
       <CarouselContent>
-        {places.map((place) => (
+        {places.map((place, index) => (
           <CarouselItem key={place.id}>
             <div className="relative">
               <div className="h-70 sm:h-85 md:h-100 overflow-hidden">
                 <Image
                   src={place.gallery.at(0)!}
-                  alt={place.name}
+                  alt={`Image of ${place.name}`}
                   className="object-cover w-full h-full brightness-50"
                   width={1200}
-                  height={500}
+                  height={400}
+                  priority={index === 0}
+                  sizes="(max-width: 1024px) 100vw, 1200px"
                 />
               </div>
               <div className="container absolute bottom-6 left-1/2 -translate-x-1/2 text-white">
                 <Heading level="2">{place.name}</Heading>
                 <div className="flex gap-2 mb-5 mt-2">
-                  <MapPin />
+                  <MapPin aria-hidden={true} />
                   <Paragraph>{place.province}</Paragraph>
                 </div>
                 <Separator />
@@ -55,8 +57,8 @@ export default function SlidePlacesHome({ places }: { places: Place[] }) {
       </CarouselContent>
       <div className="absolute top-0 left-0 w-full h-full">
         <div className="max-w-275 mx-auto w-full flex gap-1.5 justify-end pt-4 px-4">
-          <CarouselPrevious className="static translate-y-0 border-gray-400" />
-          <CarouselNext className="static translate-y-0 border-gray-400" />
+          <CarouselPrevious className="static translate-y-0 border-gray-400" aria-label="สไลด์ก่อนหน้านี้" />
+          <CarouselNext className="static translate-y-0 border-gray-400" aria-label="สไลด์ถัดไป" />
         </div>
       </div>
     </Carousel>

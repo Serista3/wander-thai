@@ -17,6 +17,7 @@ import AtmosphereMultiSelect from "./AtmosphereMultiSelect";
 import StatusRadioGroup from "./StatusRadioGroup";
 import RatingSlider from "./RatingSlider";
 import { useRouter, useSearchParams } from "next/navigation";
+import { toast } from "sonner";
 
 export default function FilterControl() {
   const searchParams = useSearchParams();
@@ -52,6 +53,12 @@ export default function FilterControl() {
 
     const tags: string[] = [];
     const ratings: string[] = [];
+
+    // Validate value
+    if(budgetValue < 0){
+      toast.error('Budget must be greater than equal to 0.')
+      return
+    }
 
     for (const [key, value] of formData.entries()) {
       const strValue = value.toString();

@@ -22,9 +22,13 @@ export default function FavoriteContextProvider({
   const [favorites, setFavorites] = useState<Favorite[]>([]);
 
   useEffect(() => {
-    const favorites = localStorage.getItem('favorites')
-    if(favorites){
-      setFavorites(JSON.parse(favorites))
+    const savedFavorites = localStorage.getItem('favorites')
+    if (savedFavorites) {
+      try {
+        setFavorites(JSON.parse(savedFavorites));
+      } catch (error) {
+        console.error("Failed to parse favorites from localStorage", error);
+      }
     }
   }, [])
 

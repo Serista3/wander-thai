@@ -16,8 +16,8 @@ export default function UserMenu() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size='icon' className="border-gray-400">
-          <TextAlignJustify />
-          <span className="hidden">เมนู</span>
+          <TextAlignJustify aria-hidden={true} />
+          <span className="sr-only">เมนู</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
@@ -25,7 +25,7 @@ export default function UserMenu() {
           <DropdownMenuLabel className="font-semibold">ผู้ใช้</DropdownMenuLabel>
           <DropdownMenuItem asChild>
             <Link href="/user/my-collection" className="cursor-pointer">
-              <Library />
+              <Library aria-hidden={true} />
               <span>รายการที่ชื่นชอบ</span>
             </Link>
           </DropdownMenuItem>
@@ -37,19 +37,19 @@ export default function UserMenu() {
           </DropdownMenuLabel>
           <DropdownMenuItem asChild>
             <Link href="/" className="cursor-pointer">
-              <House />
+              <House aria-hidden={true} />
               <span>หน้าแรก</span>
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
             <Link href="/browse" className="cursor-pointer">
-              <Globe />
+              <Globe aria-hidden={true} />
               <span>สำรวจและค้นหา</span>
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
             <Link href="/contact" className="cursor-pointer">
-              <Contact />
+              <Contact aria-hidden={true} />
               <span>ติดต่อเรา</span>
             </Link>
           </DropdownMenuItem>

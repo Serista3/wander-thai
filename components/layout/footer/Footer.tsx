@@ -6,7 +6,7 @@ import { Separator } from '@/components/ui/separator';
 
 export default function Footer() {
   return (
-    <footer className="py-9 bg-emerald-600 text-white">
+    <footer className="py-9 bg-black text-white">
       <div className="container">
         <Logo />
         <Navigation items={defaultLinks} className="mt-4 mb-6" />
